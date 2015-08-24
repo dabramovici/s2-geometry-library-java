@@ -1,2 +1,22 @@
+target/
+*.class
 
-build/
+# Intellij IDEA project files
+*.iml
+.idea/
+
+# Eclipse project files
+.classpath
+.externalToolBuilders
+.project
+.settings/
+
+# Windows stuff
+Thumbs.db
+
+#Mac Stuff
+*.DS_Store
+
+# logs
+logs/
+
