@@ -333,11 +333,11 @@ public strictfp class S2PolygonBuilderTest extends GeometryTestCase {
   }
 
   boolean evalTristate(int state) {
-    return (state > 0) ? true : (state < 0) ? false : (rand.nextDouble() > 0.5);
+    return (state > 0) || ((state == 0) && (rand.nextDouble() > 0.5));
   }
 
   boolean testBuilder(TestCase test) {
-    for (int iter = 0; iter < 200; ++iter) {
+    for (int iter = 0; iter < 10; ++iter) {
       // Initialize to the default options, which are changed below
       S2PolygonBuilder.Options options = S2PolygonBuilder.Options.DIRECTED_XOR;
 

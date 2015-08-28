@@ -34,6 +34,9 @@ public strictfp class GeometryTestCase extends TestCase {
     rand = new Random(123456);
   }
 
+  public void testDummy() {
+  }
+
   public void assertDoubleNear(double a, double b) {
     assertDoubleNear(a, b, 1e-9);
   }

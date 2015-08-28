@@ -250,6 +250,7 @@ public strictfp class S2PolygonTest extends GeometryTestCase {
     if (s2Loop.numVertices() != 8) {
       return;
     }
+
     assertPointApproximatelyEquals(s2Loop, 0, 2.0, 0.0, 0.01);
     assertPointApproximatelyEquals(s2Loop, 1, 1.0, 0.0, 0.01);
     assertPointApproximatelyEquals(s2Loop, 2, 0.0, 0.0, 0.01);

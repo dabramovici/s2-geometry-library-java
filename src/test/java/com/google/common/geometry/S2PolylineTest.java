@@ -18,8 +18,6 @@ package com.google.common.geometry;
 
 import com.google.common.collect.Lists;
 
-import junit.framework.Assert;
-
 import java.util.List;
 
 /**
@@ -175,14 +173,14 @@ public strictfp class S2PolylineTest extends GeometryTestCase {
   private static void checkEqualsAndHashCodeMethods(Object lhs, Object rhs,
                                              boolean expectedResult) {
     if ((lhs == null) && (rhs == null)) {
-      Assert.assertTrue(
+      assertTrue(
           "Your check is dubious...why would you expect null != null?",
           expectedResult);
       return;
     }
 
     if ((lhs == null) || (rhs == null)) {
-      Assert.assertFalse(
+      assertFalse(
           "Your check is dubious...why would you expect an object "
           + "to be equal to null?", expectedResult);
     }
@@ -197,7 +195,7 @@ public strictfp class S2PolylineTest extends GeometryTestCase {
     if (expectedResult) {
       String hashMessage =
           "hashCode() values for equal objects should be the same";
-      Assert.assertTrue(hashMessage, lhs.hashCode() == rhs.hashCode());
+      assertTrue(hashMessage, lhs.hashCode() == rhs.hashCode());
     }
   }
 }
